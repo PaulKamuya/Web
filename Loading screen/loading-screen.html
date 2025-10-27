@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading screen | Test</title>
+  <link rel="stylesheet" href="loading-screen-style.css">
+</head>
+<body>
+  <!--Loading thing-->
+  <div id="loader">
+    <div class="spinner"></div>
+    Loading ...
+  </div>
+
+<!--Content-->
+  <div id="content">
+    <h1>Welcome to my page</h1>
+    <p>Main content of the pages goes here</p>
+  </div>
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("content").style.display = "block";
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Lexend;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-img{
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-container{
+  display: flex; /*fixes the centering problem i had*/
+  flex-direction: column; /*fixes the centering problem i had*/
+  justify-content: center; /*fixes the centering problem i had*/
+  align-items: center; /*fixes the centering problem i had*/
+  padding: 50px 30px;
+  background-color: rgba(0, 0, 0, 0.185);
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  position: absolute;
+  max-width: 450px;
+
+  backdrop-filter: blur(2px);
+  color: white;
+}
+
+h1{
+  margin: 0;
+}
+
+.input-cnt{
+  margin: 30px 0;
+  position: relative;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-cnt input{ 
+  height: 50px;
+  width: 400px;
+  padding-left: 10px;
+  padding-right: 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+
+input:focus{
+  background-color: rgba(255, 255, 255, 0.288);
+}
+
+
+.input-cnt label{
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  transform: translateY(-50);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .3s;
+}
+
+.input-cnt input:focus~label, .input-cnt input:valid~label {
+  top: -6px; 
+  background: rgb(255, 255, 255);
+  font-size: 12px;
+  padding: 0 5px;
+  color: rgb(0, 0, 0);
+}
+
+
+.input-cnt i{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.checkbox-cnt{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.checkbox-cnt input{ 
+  margin-right: 10px;
+}
+
+.forgot{
+  color: white;
+}
+
+.btn{
+  width: 400px;
+  height: 30px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover{
+  color: black;
+  background-color: white;
+}
+
+
+.message{
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+a:hover{
+  text-decoration: underline;
+}

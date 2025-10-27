@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .color-changing-button {
+      background-color: #ffffff; /* Initial background color */
+      color: rgb(0, 0, 0);
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden; /* Hide the overflowing gradient initially */
+      transition: background-color 0.3s ease; /* Smooth transition for background color */
+    }
+
+    .color-changing-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #3498db; /* Gradient from top to bottom */
+      transform: scaleY(0); /* Start hidden above the button */
+      transform-origin: bottom;
+      transition: transform 0.1s ease; /* Smooth transition for the transform */
+      z-index: -1; /* Place behind the button text */
+    }
+
+    .color-changing-button:hover::before{
+      transform: scaleY(100%); /* Move the gradient down to cover the button */
+    }
+
+    .color-changing-button:hover {
+      background: none; /* Make the initial background transparent on hover */
+    }
+
+  </style>
+</head>
+<body>
+  <button class="color-changing-button">Hover Me</button>
+</body>
+</html>

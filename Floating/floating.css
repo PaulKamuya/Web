@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+}
+
+.input-group {
+  margin: 10px 0;
+  position: relative;
+  color: white;
+}
+
+.input-group label {
+  position: absolute;
+  transform: translateY(-50);
+  top: 15px;
+  left: 15px;
+  font-size: 16px;
+  pointer-events: none;
+  padding: 0 5px;
+  color: white;
+  transition: .3s;
+}
+
+.input-group input {
+  width: 360px;
+  height: 60px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 1.2px solid white;
+  background: transparent;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+}
+
+
+.input-group input:focus~label, .input-group input:valid~label{
+  top: -8px;
+  background: black; /* the only way to make it do what i want it to do*/
+  font-size: 14px;
+}
+
+.login-button, .signup { 
+  width: 100px;
+  height: 30px;
+  background-color: transparent;
+  color: white;
+  border: 1.2px solid white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.login-button:hover, .signup:hover{
+  background-color: white;
+  color: black;
+}
+
+.signup{
+  margin-left: 15px;
+}
